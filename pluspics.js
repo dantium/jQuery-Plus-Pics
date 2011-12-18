@@ -1,7 +1,7 @@
 /*
  
     jQuery plugin to retrieve images from Google+ and display with hover effect.
-    
+    Author: Dan Aktinson (www.danatkinson.com)
 	Usage:
 	-----
 
@@ -30,7 +30,7 @@
   		  $.each(data.feed.entry, function(i,item) {
   			url = item.media$group.media$content[0].url;
   			title = item.media$group.media$title.$t;
-  		    items.push('<li id="pluspic-'+i+'"><a title="'+title+'"><span><img src="' +url+ '" alt="'+title+'"/></span></a></li>');
+  		    items.push('<li class="pluspic-'+i+'"><a title="'+title+'"><span><img src="' +url+ '" alt="'+title+'"/></span></a></li>');
   		  }); 
   		  $('<ul/>', {
   		    'class': 'pluspics',
@@ -42,16 +42,16 @@
   					   "margin-top": '-' + ( parseInt( $(this).height() ) / 2 ) + 'px'
   					};
   			   $(this).css(css);
-  			   $(this).fadeIn(3000, function() {
+  			   $(this).fadeIn(1000, function() {
     				 $(this).parent().hover(function() {
 						    $(this).addClass("hover");
 						    var img = $(this).children('img');
-						    $(this).css({ "z-index": "1000",});
-						    $(this).stop().animate({	
+						    $(this).css({ "z-index": "1000"});
+						    $(this).stop().animate({
 						        width: img.width(),
 						        height: img.height(),
 						        left: '-'+(parseInt(img.width()-$(this).width())/2)+'px',
-			                    top: '-'+(parseInt(img.height()-$(this).height())/2)+'px',
+			                    top: '-'+(parseInt(img.height()-$(this).height())/2)+'px'
 						      }, 500);
 						  },
 						  function() {

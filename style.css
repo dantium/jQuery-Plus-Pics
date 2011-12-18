@@ -1,51 +1,41 @@
 /* ---------- plus pics -----------*/
 
-.pluspics li {
+#container-id .pluspics {
+	width: 940px;
+	}
+
+#container-id .pluspics li {
 	position: relative;
 	float: left;
+	width: 188px;
+	height: 125px;
 	}
 	
-.pluspics li a span {
+#container-id .pluspics li a span {
 	position: absolute;
 	display:block;
 	overflow: hidden;
-	width: 238px;
-	height: 140px;
-	padding: 3px;
+	width: 188px;
+	height: 125px;
+	padding: 6px;
 	background-color: #fff;
 	}
 	
-.pluspics li a {
+#container-id .pluspics li a {
 	display:block;
 	}
 	
-.pluspics li a:hover span.hover {
-	padding: 2px;
+#container-id .pluspics li a:hover span.hover {
+	padding: 5px;
 	border: solid 1px #CCC;
 	-moz-box-shadow: 1px 1px 5px #999;
 	-webkit-box-shadow: 1px 1px 5px #999;
     box-shadow: 1px 1px 5px #999;
 }
 	
-.pluspics li img {
+#container-id .pluspics li img {
 	position: absolute;
 	top:50%;
   	left:50%;
   	display: none;
-	}
-
-#pluspic-0  {
-	margin-right: 6px;
-	width: 390px;
-	height: 280px;
-	}
-		
-#pluspic-0 a span {
-	width: 390px;
-	height: 280px;
-	z-index: 0;
-	}
-	
-#pluspic-2  {
-	top:140px;
-	}
+}
